@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<map>
+  <Regions>
+    <region name="East Summer Sea"
+            type="ocean">
+      <features>
+      </features>
+      <adjacencies>
+        <adjacency region="West Summer Sea"/>
+        <adjacency region="Starfall"/>
+        <adjacency region="Salt Shore"/>
+        <adjacency region="Sunspear"/>
+        <adjacency region="Sunspear Port"/>
+        <adjacency region="Sea of Dorne"/>
+        <adjacency region="Shipbreaker Bay"/>
+        <adjacency region="Storm's End"/>
+      </adjacencies>
+    </region>
+    <region name="Sea of Dorne"
+        type="ocean">
+      <features>
+      </features>
+      <adjacencies>
+        <adjacency region="East Summer Sea"/>
+        <adjacency region="Yronwood"/>
+        <adjacency region="Salt Shore"/>
+        <adjacency region="Sunspear"/>
+        <adjacency region="Storm's End"/>
+        <adjacency region="The Boneway"/>
+      </adjacencies>
+    </region>
+    <region name="West Summer Sea"
+            type="ocean">
+      <features>
+      </features>
+      <adjacencies>
+        <adjacency region="East Summer Sea"/>
+        <adjacency region="Starfall"/>
+        <adjacency region="Three Towers"/>
+        <adjacency region="Redwyne Straights"/>
+        <adjacency region="Highgarden"/>
+        <adjacency region="The Arbor"/>
+        <adjacency region="Searoad Marches"/>
+        <adjacency region="Sunset Sea"/>
+      </adjacencies>
+    </region>
+    <region name="Redwyne Striaghts"
+            type="ocean">
+      <features>
+      </features>
+      <adjacencies>
+        <adjacency region="West Summer Sea"/>
+        <adjacency region="The Arbor"/>
+        <adjacency region="Three Towers"/>
+        <adjacency region="Highgarden"/>
+        <adjacency region="Highgarden Port"/>
+        <adjacency region="Oldtown"/>
+      </adjacencies>
+    </region>
+    <region name="Sunspear"
+            type="land">
+      <features>
+        <supply quantity="1"/>
+        <power quantity="1"/>
+        <victory quantity="2"/>
+        <homeregion house="Martell"/>
+      </features>
+      <adjacencies>
+        <adjacency region="East Summer Sea"/>
+        <adjacency region="Yronwood"/>
+        <adjacency region="Salt Shore"/>
+        <adjacency region="Sunspear Port"/>
+        <adjacency region="Sea of Dorne"/>
+      </adjacencies>
+    </region>
+    <region name="Salt Shore"
+            type="land">
+      <features>
+        <supply quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="East Summer Sea"/>
+        <adjacency region="Yronwood"/>
+        <adjacency region="Starfall"/>
+        <adjacency region="Sunspear"/>
+      </adjacencies>
+    </region>
+    <region name="Yronwood"
+            type="land">
+      <features>
+        <victory quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="Sea of Dorne"/>
+        <adjacency region="The Boneway"/>
+        <adjacency region="Starfall"/>
+        <adjacency region="Sunspear"/>
+        <adjacency region="Salt Shore"/>
+        <adjacency region="Prince's Pass"/>
+      </adjacencies>
+    </region>
+    <region name="Starfall"
+        type="land">
+      <features>
+        <victory quantity="1"/>
+        <supply quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="West Summer Sea"/>
+        <adjacency region="East Summer Sea"/>
+        <adjacency region="Prince's Pass"/>
+        <adjacency region="Yronwood"/>
+        <adjacency region="Salt Shore"/>
+      </adjacencies>
+    </region>
+    <region name="The Arbor"
+    type="land">
+      <features>
+        <power quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="West Summer Sea"/>
+        <adjacency region="Redwyne Straights"/>
+      </adjacencies>
+    </region>
+    <region name="Three Towers"
+            type="land">
+      <features>
+        <supply quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="West Summer Sea"/>
+        <adjacency region="Redwyne Straights"/>
+        <adjacency region="Prince's Pass"/>
+        <adjacency region="Dornish Marshes"/>
+        <adjacency region="Oldtown"/>
+      </adjacencies>
+    </region>
+    <region name="Prince's Pass"
+      type="land">
+      <features>
+        <supply quantity="1"/>
+        <power quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="Oldtown Port"/>
+
+      </adjacencies>
+    </region>
+    <region name="Oldtown"
+          type="land">
+      <features>
+        <victory quantity="1"/>
+      </features>
+      <adjacencies>
+        <adjacency region="Oldtown Port"/>
+        <adjacency region="Redwyne Straights"/>
+        <adjacency region="Three Towers"/>
+        <adjacency region="Dornish Marshes"/>
+        <adjacency region="Highgarden"/>
+      </adjacencies>
+    </region>
+  </Regions>
+</map> 

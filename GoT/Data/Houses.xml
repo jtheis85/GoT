@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<houses>
+  <house name="Baratheon"
+         minPlayers="3"
+         startingSupply="2"
+         startingIronThrone="1"
+         startingKingsCourt="4"
+         startingFiefdoms="5"
+         startingVictory="1">
+    <startingForce>
+      <unit type="Ship"
+            location ="Shipbreaker Bay"/>
+      <unit type="Ship"
+            location ="Shipbreaker Bay"/>
+      <unit type="Knight"
+            location ="Dragonstone"/>
+      <unit type="Footman"
+            location ="Dragonstone"/>
+      <unit type="Footman"
+            location ="Kingswood"/>
+    </startingForce>
+  </house>
+  <house name="Lannister"
+         minPlayers="3"
+         startingSupply="2"
+         startingIronThrone="2"
+         startingKingsCourt="1"
+         startingFiefdoms="6"
+         startingVictory="1">
+    <startingForce>
+      <unit type="Ship"
+            location ="The Golden Sound"/>
+      <unit type="Knight"
+            location ="Lannisport"/>
+      <unit type="Footman"
+            location ="Lannisport"/>
+      <unit type="Footman"
+            location ="Stoney Sept"/>
+    </startingForce>
+  </house>
+  <house name="Stark"
+         minPlayers="3"
+         startingSupply="1"
+         startingIronThrone="3"
+         startingKingsCourt="2"
+         startingFiefdoms="4"
+         startingVictory="2"
+         homeRegion="Winterfell">
+    <startingForce>
+      <unit type="Ship"
+            location ="The Shivering Sea"/>
+      <unit type="Knight"
+            location ="Winterfell"/>
+      <unit type="Footman"
+            location ="Winterfell"/>
+      <unit type="Footman"
+            location ="White Harbor"/>
+    </startingForce>
+  </house>
+  <house name="Tyrell"
+         minPlayers="5"
+         startingSupply="2"
+         startingIronThrone="6"
+         startingKingsCourt="5"
+         startingFiefdoms="2"
+         startingVictory="1"
+         homeRegion="Highgarden">
+    <startingForce>
+      <unit type="Ship"
+            location ="Redwyne Straights"/>
+      <unit type="Knight"
+            location ="Highgarden"/>
+      <unit type="Footman"
+            location ="Highgarden"/>
+      <unit type="Footman"
+            location ="Dornish Marshes"/>
+    </startingForce>
+  </house>
+  <house name="Greyjoy"
+         minPlayers="4"
+         startingSupply="2"
+         startingIronThrone="5"
+         startingKingsCourt="6"
+         startingFiefdoms="1"
+         startingVictory="1"
+         homeRegion="Pyke">
+    <startingForce>
+      <unit type="Ship"
+            location ="Ironman's Bay"/>
+      <unit type="Ship"
+            location ="Pyke Port"/>
+      <unit type="Knight"
+            location ="Pyke"/>
+      <unit type="Footman"
+            location ="Pyke"/>
+      <unit type="Footman"
+            location ="Greywater Watch"/>
+    </startingForce>
+  </house>
+  <house name="Martell"
+         minPlayers="6"
+         startingSupply="2"
+         startingIronThrone="4"
+         startingKingsCourt="3"
+         startingFiefdoms="3"
+         startingVictory="1"
+         homeRegion="Pyke">
+    <startingForce>
+      <unit type="Ship"
+            location ="Sea of Dorn"/>
+      <unit type="Knight"
+            location ="Sunspear"/>
+      <unit type="Footman"
+            location ="Sunspear"/>
+      <unit type="Footman"
+            location ="Salt Shore"/>
+    </startingForce>
+  </house>
+</houses>

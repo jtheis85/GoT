@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace GoT
+{
+  public class Region
+  {
+    public int ID { get; set; }
+
+    public string Name { get; set; }
+
+    public HouseName HomeRegion { get; set; }
+
+    public int Supply { get; set; }
+
+    public int Power { get; set; }
+
+    public RegionType RegionType { get; set; }
+  }
+
+  public enum RegionType
+  {
+    Land,
+    Sea,
+    Port
+  }
+}

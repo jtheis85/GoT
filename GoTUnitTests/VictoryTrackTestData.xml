@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VictoryTrackTestData>
+  <TestCase>
+    <baratheonInput>2</baratheonInput>
+    <lannisterInput>2</lannisterInput>
+    <starkInput>3</starkInput>
+    <baratheonOutput>2</baratheonOutput>
+    <lannisterOutput>2</lannisterOutput>
+    <starkOutput>3</starkOutput>
+  </TestCase>
+  <TestCase>
+    <baratheonInput>1</baratheonInput>
+    <lannisterInput>1</lannisterInput>
+    <starkInput>1</starkInput>
+    <baratheonOutput>1</baratheonOutput>
+    <lannisterOutput>1</lannisterOutput>
+    <starkOutput>1</starkOutput>
+  </TestCase>
+</VictoryTrackTestData>

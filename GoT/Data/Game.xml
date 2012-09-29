@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<game>
+  <gameParameters startingWildlingThreat="2"
+                  startingPowerPerPlayer="5"
+                  powerPerPlayerLimit="20"/>
+  <unitLimits>
+    <unitLimit type="Footman" limit="10"/>
+    <unitLimit type="Knight" limit="5"/>
+    <unitLimit type="Ship" limit="6"/>
+    <unitLimit type="SiegeEngine" limit="2"/>
+  </unitLimits>
+  <orderLimits>
+    <orderLimit type="weakMarch" limit="1"/>
+    <orderLimit type="normalMarch" limit="1"/>
+    <orderLimit type="specialMarch" limit="1"/>
+    <orderLimit type="normalDefense" limit="2"/>
+    <orderLimit type="specialDefense" limit="1"/>
+    <orderLimit type="normalRaid" limit="2"/>
+    <orderLimit type="specialRaid" limit="1"/>
+    <orderLimit type="normalSupport" limit="2"/>
+    <orderLimit type="specialSupport" limit="1"/>
+    <orderLimit type="normalConsolidate" limit="2"/>
+    <orderLimit type="specialConsolidate" limit="1"/>
+  </orderLimits>
+  <supplyLimits>
+    <supplyLimit supply="0" size="1" limit="null"/>
+    <supplyLimit supply="0" size="2" limit="2"/>
+    <supplyLimit supply="0" size="3" limit="0"/>
+    <supplyLimit supply="0" size="4" limit="0"/>
+    <supplyLimit supply="1" size="1" limit="null"/>
+    <supplyLimit supply="1" size="2" limit="1"/>
+    <supplyLimit supply="1" size="3" limit="1"/>
+    <supplyLimit supply="1" size="4" limit="0"/>
+    <supplyLimit supply="2" size="1" limit="null"/>
+    <supplyLimit supply="2" size="2" limit="2"/>
+    <supplyLimit supply="2" size="3" limit="1"/>
+    <supplyLimit supply="2" size="4" limit="0"/>
+    <supplyLimit supply="3" size="1" limit="null"/>
+    <supplyLimit supply="3" size="2" limit="3"/>
+    <supplyLimit supply="3" size="3" limit="1"/>
+    <supplyLimit supply="3" size="4" limit="0"/>
+    <supplyLimit supply="4" size="1" limit="null"/>
+    <supplyLimit supply="4" size="2" limit="2"/>
+    <supplyLimit supply="4" size="3" limit="2"/>
+    <supplyLimit supply="4" size="4" limit="0"/>
+    <supplyLimit supply="5" size="1" limit="null"/>
+    <supplyLimit supply="5" size="2" limit="2"/>
+    <supplyLimit supply="5" size="3" limit="1"/>
+    <supplyLimit supply="5" size="4" limit="1"/>
+    <supplyLimit supply="6" size="1" limit="null"/>
+    <supplyLimit supply="6" size="2" limit="3"/>
+    <supplyLimit supply="6" size="3" limit="1"/>
+    <supplyLimit supply="6" size="4" limit="1"/>
+  </supplyLimits>
+</game>
