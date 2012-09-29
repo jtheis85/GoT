@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GoT
 {
-  public class Game
+  public class Game 
   {
     public int WildlingThreat { get; set; }
 
