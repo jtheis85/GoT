@@ -10,6 +10,9 @@ namespace GoT
   /// </summary>
   public class Game 
   {
+    /// <summary>
+    /// 
+    /// </summary>
     public int WildlingThreat { get; set; }
 
 
