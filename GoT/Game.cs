@@ -13,7 +13,9 @@ namespace GoT
     public int WildlingThreat { get; set; }
 
 
-
+    /// <summary>
+    /// 
+    /// </summary>
     public SupplyTrack SupplyTrack
     {
       get { return supplyTrack; }
