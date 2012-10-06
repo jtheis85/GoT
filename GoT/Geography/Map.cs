@@ -8,6 +8,8 @@ namespace GoT.Geography
 {
   public class Map
   {
+    public Tuple<int,int> BackgroundDimensions { get; set; }
+
     private IGameData gameData;
     private IList<Region> regions;
     private IList<RegionAdjacency> adjacency;
@@ -17,6 +19,7 @@ namespace GoT.Geography
       this.gameData = gameData;
       regions = gameData.GetRegions();
       adjacency = gameData.GetRegionAdjacencies();
+      BackgroundDimensions = gameData.GetBackgroundDimensions();
     }
 
     public int RegionCount
@@ -32,6 +35,11 @@ namespace GoT.Geography
     public bool AreAdjacentBy(AdjacencyType adjacencyType, int firstRegionID, int secondRegionID)
     {
       return adjacency.Contains(new RegionAdjacency() { FirstRegion = firstRegionID, SecondRegion = secondRegionID, AdjacencyType = adjacencyType });
+    }
+
+    public Region Region(int RegionId)
+    {
+      return regions.First(r => r.ID == RegionId);
     }
   }
 }

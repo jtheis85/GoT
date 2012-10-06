@@ -18,6 +18,10 @@ namespace GoT
     public int Power { get; set; }
 
     public RegionType RegionType { get; set; }
+
+    public string Shape { get; set; }
+
+    public Tuple<int, int, int, int> Margin { get; set; }
   }
 
   public enum RegionType

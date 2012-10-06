@@ -8,11 +8,14 @@ namespace GoT.Data
 {
   public interface IGameData
   {
-    IList<UnitType> GetUnitTypes();
     int GetVictoryPointLimit();
 
     IList<Region> GetRegions();
 
     IList<RegionAdjacency> GetRegionAdjacencies();
+
+    IList<UnitType> GetUnitTypes();
+
+    Tuple<int, int> GetBackgroundDimensions();
   }
 }

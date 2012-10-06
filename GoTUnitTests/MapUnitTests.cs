@@ -23,14 +23,13 @@ namespace GoTUnitTests
     [TestMethod]
     public void BasicRegions()
     {
-      mockData = new Mock<IGameData>(MockBehavior.Strict);
+      mockData = new Mock<IGameData>(MockBehavior.Loose);
       mockData.Setup(d => d.GetRegions()).Returns(new List<Region>()
       {
         new Region() { ID = 0, Name = "Dragonstone", HomeRegion = HouseName.Baratheon, Supply = 1, Power = 1},
         new Region() { ID = 1, Name = "Lannisport",  HomeRegion = HouseName.Lannister, Supply = 1, Power = 1},
         new Region() { ID = 2, Name = "Winterfell",  HomeRegion = HouseName.Stark,     Supply = 1, Power = 1}
       });
-      mockData.Setup(d => d.GetRegionAdjacencies()).Returns(new List<RegionAdjacency>());
 
       var map = new Map(mockData.Object);
       map.RegionCount.Should().Be(3);
@@ -43,7 +42,7 @@ namespace GoTUnitTests
     [TestMethod]
     public void BasicAdjacency()
     {
-      mockData = new Mock<IGameData>(MockBehavior.Strict);
+      mockData = new Mock<IGameData>(MockBehavior.Loose);
       mockData.Setup(d => d.GetRegions()).Returns(new List<Region>()
       {
         new Region() { ID = 0, Name = "Dragonstone", HomeRegion = HouseName.Baratheon, Supply = 1, Power = 1},
@@ -78,7 +77,7 @@ namespace GoTUnitTests
     [TestMethod]
     public void TestReverseAdjacency()
     {
-      mockData = new Mock<IGameData>(MockBehavior.Strict);
+      mockData = new Mock<IGameData>(MockBehavior.Loose);
       mockData.Setup(d => d.GetRegions()).Returns(new List<Region>()
       {
         new Region() { ID = 0, Name = "Dragonstone", HomeRegion = HouseName.Baratheon, Supply = 1, Power = 1},
@@ -119,7 +118,7 @@ namespace GoTUnitTests
     [TestMethod]
     public void TestAdjacencyType()
     {
-      mockData = new Mock<IGameData>(MockBehavior.Strict);
+      mockData = new Mock<IGameData>(MockBehavior.Loose);
       mockData.Setup(d => d.GetRegions()).Returns(new List<Region>()
       {
         new Region() { ID = 0}, 
@@ -137,9 +136,54 @@ namespace GoTUnitTests
 
       var map = new Map(mockData.Object);
 
+
+      // TODO: Allow adjacency tests to be called on region
+      // This seems wrong. More natural: if (region1.IsAdjacentTo(Region2, by: AdjacencyType.Bridge))
+      // Possibly have regions hold a reference to their map to call the base function?
       map.AreAdjacentBy(AdjacencyType.Bridge,  firstRegionID: 0, secondRegionID: 1).Should().Be(true);
       map.AreAdjacentBy(AdjacencyType.Bridge,  firstRegionID: 2, secondRegionID: 3).Should().Be(false);
       map.AreAdjacentBy(AdjacencyType.Default, firstRegionID: 2, secondRegionID: 3).Should().Be(true);
+    }
+
+    /// <summary>
+    /// Tests that simple region shape and margin data is correctly stored and retrieved
+    /// </summary>
+    [TestMethod]
+    public void TestSimpleRegionData()
+    {
+      mockData = new Mock<IGameData>(MockBehavior.Loose);
+
+      mockData.Setup(d => d.GetRegions()).Returns(new List<Region>()
+      {
+        new Region() 
+        { 
+          ID = 0, 
+          Shape = "M 5,5 L 10,5 L 10,10 L 5,10 Z",
+          Margin = new Tuple<int, int, int, int>(15, 10, 5, 25)
+        }, 
+      });
+
+      var map = new Map(mockData.Object);
+
+      map.Region(0).Shape.Should().Be("M 5,5 L 10,5 L 10,10 L 5,10 Z");
+      map.Region(0).Margin.Should().Be(new Tuple<int, int, int, int>(15, 10, 5, 25));
+    }
+
+    /// <summary>
+    /// Tests that the map's art background size is correctly stored, in order
+    /// to accurately line up overlaid regions
+    /// </summary>
+    [TestMethod]
+    public void TestSimpleMapBackground()
+    {
+      mockData = new Mock<IGameData>(MockBehavior.Loose);
+
+      mockData.Setup(d => d.GetBackgroundDimensions()).Returns(new Tuple<int, int>(1600, 900));
+
+      var map = new Map(mockData.Object);
+
+      map.BackgroundDimensions.Should().Be(new Tuple<int, int>(1600, 900));
+
     }
   }
 }
