@@ -21,6 +21,9 @@ namespace GoT
 
     public string Shape { get; set; }
 
+    /// <summary>
+    /// Left, Top, Right, Bottom
+    /// </summary>
     public Tuple<int, int, int, int> Margin { get; set; }
   }
 
