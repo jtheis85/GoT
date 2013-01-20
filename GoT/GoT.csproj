@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignGameData.cs" />
     <Compile Include="Military\Army.cs" />
     <Compile Include="Military\Combat.cs" />
     <Compile Include="Game.cs" />
@@ -65,6 +66,10 @@
     <Compile Include="VictoryTrack.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Map.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Data\Game.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

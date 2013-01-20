@@ -159,31 +159,32 @@ namespace GoTUnitTests
         { 
           ID = 0, 
           Shape = "M 5,5 L 10,5 L 10,10 L 5,10 Z",
-          Margin = new Tuple<int, int, int, int>(15, 10, 5, 25)
+          Margin = "15, 10, 5, 25"
         }, 
       });
 
       var map = new Map(mockData.Object);
 
       map.Region(0).Shape.Should().Be("M 5,5 L 10,5 L 10,10 L 5,10 Z");
-      map.Region(0).Margin.Should().Be(new Tuple<int, int, int, int>(15, 10, 5, 25));
+      map.Region(0).Margin.Should().Be("15, 10, 5, 25");
     }
 
-    /// <summary>
-    /// Tests that the map's art background size is correctly stored, in order
-    /// to accurately line up overlaid regions
-    /// </summary>
-    [TestMethod]
-    public void TestSimpleMapBackground()
-    {
-      mockData = new Mock<IGameData>(MockBehavior.Loose);
+    //TODO: Come up with a better way to handle region/map art sizing
+    ///// <summary>
+    ///// Tests that the map's art background size is correctly stored, in order
+    ///// to accurately line up overlaid regions
+    ///// </summary>
+    //[TestMethod]
+    //public void TestSimpleMapBackground()
+    //{
+    //  mockData = new Mock<IGameData>(MockBehavior.Loose);
 
-      mockData.Setup(d => d.GetBackgroundDimensions()).Returns(new Tuple<int, int>(1600, 900));
+    //  mockData.Setup(d => d.GetBackgroundDimensions()).Returns(new Tuple<int, int>(1600, 900));
 
-      var map = new Map(mockData.Object);
+    //  var map = new Map(mockData.Object);
 
-      map.BackgroundDimensions.Should().Be(new Tuple<int, int>(1600, 900));
+    //  map.BackgroundDimensions.Should().Be(new Tuple<int, int>(1600, 900));
 
-    }
+    //}
   }
 }

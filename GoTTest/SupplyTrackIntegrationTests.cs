@@ -1,5 +1,6 @@
 using FluentAssertions;
 using GoT;
+using GoT.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GoTIntegrationTests

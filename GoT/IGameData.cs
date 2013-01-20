@@ -10,7 +10,7 @@ namespace GoT.Data
   {
     int GetVictoryPointLimit();
 
-    IList<Region> GetRegions();
+    IEnumerable<Region> GetRegions();
 
     IList<RegionAdjacency> GetRegionAdjacencies();
 
