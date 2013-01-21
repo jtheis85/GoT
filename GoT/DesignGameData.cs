@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using GoT.Geography;
 
 namespace GoT.Data
 {
@@ -34,9 +35,9 @@ namespace GoT.Data
       return Regions;
     }
 
-    public IList<Geography.RegionAdjacency> GetRegionAdjacencies()
+    public IList<RegionAdjacency> GetRegionAdjacencies()
     {
-      throw new NotImplementedException();
+      return new List<RegionAdjacency>();
     }
 
     public IList<UnitType> GetUnitTypes()
